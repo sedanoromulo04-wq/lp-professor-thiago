@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Formulário de Redação Nota Máxima — Prof. Thiago Marques</title>
+<meta name="description" content="Formulário de Redação Nota Máxima — Prof. Thiago Marques. O passo a passo definitivo para tirar nota máxima na redação do concurso, no menor tempo possível.">
+<link rel="preload" as="image" href="webp/hero.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400;1,14..32,600;1,14..32,700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400;1,14..32,600;1,14..32,700&display=swap"></noscript>
+<style>
+:root{
+ --az:#1A2B4A; --or:#FF6B35; --orh:#E55A25;
+ --vd:#16A34A; --vm:#DC2626; --am:#FEF08A;
+ --pr:#0A0F1E; --br:#FFFFFF; --off:#F3F4F6; --cr:#FFFBEB;
+ --cl:#E5E7EB; --md:#6B7280; --tx:#374151;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--pr);background:var(--br);
+ line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.W{max-width:860px;margin:0 auto;padding:0 24px}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.rv.on{opacity:1;transform:none}
+.rv.d1{transition-delay:.07s}.rv.d2{transition-delay:.14s}.rv.d3{transition-delay:.21s}
+/* ── CTA BTN ── */
+.btn{display:block;background:var(--or);color:#fff;font-weight:800;font-size:17px;
+ letter-spacing:.05em;text-transform:uppercase;padding:20px 36px;border-radius:6px;
+ border:none;cursor:pointer;text-align:center;
+ box-shadow:0 4px 20px rgba(255,107,53,.35);
+ transition:background .2s,transform .15s,box-shadow .2s}
+.btn:hover{background:var(--orh);transform:scale(1.02);box-shadow:0 8px 32px rgba(255,107,53,.5)}
+.trust-row{display:flex;gap:14px;align-items:center;justify-content:center;
+ flex-wrap:wrap;margin-top:14px}
+.trust-item{display:flex;gap:5px;align-items:center;font-size:11px;color:var(--md)}
+.trust-sep{color:var(--cl)}
+/* ── CHECK / X ICONS ── */
+.ck{width:26px;height:26px;border-radius:50%;background:var(--vd);
+ display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ck svg{display:block}
+.xk{width:26px;height:26px;border-radius:50%;background:var(--vm);
+ display:flex;align-items:center;justify-content:center;flex-shrink:0}
+/* ══════════════════════════════════
+ POPUP
+══════════════════════════════════ */
+.pop-ov{position:fixed;inset:0;background:rgba(10,15,30,.78);
+ display:flex;align-items:center;justify-content:center;z-index:9999;
+ opacity:0;pointer-events:none;transition:opacity .3s ease}
+.pop-ov.show{opacity:1;pointer-events:all}
+.pop-box{background:#fff;border-radius:10px;width:100%;max-width:400px;
+ overflow:hidden;box-shadow:0 28px 80px rgba(0,0,0,.4);
+ transform:scale(.9) translateY(14px);
+ transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.pop-ov.show .pop-box{transform:scale(1) translateY(0)}
+.pop-inner{padding:32px 32px 28px;text-align:center;position:relative}
+.pop-close{position:absolute;top:12px;right:14px;width:26px;height:26px;
+ background:var(--cl);border-radius:50%;border:none;cursor:pointer;
+ font-size:12px;color:var(--md);display:flex;align-items:center;justify-content:center;
+ transition:background .15s}
+.pop-close:hover{background:#D1D5DB}
+.pop-logo{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:14px}
+.pop-logo-ico{width:36px;height:36px;background:rgba(255,107,53,.1);border-radius:8px;
+ display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pop-logo-txt{text-align:left}
+.pop-ey{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+ color:var(--md);line-height:1}
+.pop-na{font-size:15px;font-weight:800;color:var(--az);line-height:1.15;display:block}
+.pop-nb{font-size:15px;font-weight:900;color:var(--or);line-height:1.15;display:block}
+.pop-bar{height:3px;background:var(--or);margin:14px -32px 18px}
+.pop-tit{font-size:20px;font-weight:900;color:var(--az);line-height:1.2;margin-bottom:6px}
+.pop-tit span{color:var(--or)}
+.pop-sub{font-size:13px;color:var(--md);line-height:1.65;margin-bottom:20px}
+.pop-btn{display:block;width:100%;background:var(--or);color:#fff;font-weight:800;
+ font-size:14px;letter-spacing:.05em;text-transform:uppercase;padding:15px 20px;
+ border-radius:6px;border:none;cursor:pointer;
+ box-shadow:0 4px 16px rgba(255,107,53,.35);transition:background .2s}
+.pop-btn:hover{background:var(--orh)}
+.pop-skip{display:block;margin-top:10px;font-size:11px;color:var(--md);cursor:pointer;
+ text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--cl)}
+/* ══════════════════════════════════
+ HEADER
+══════════════════════════════════ */
+.hdr{background:#fff;padding:16px 0 0}
+.hdr-in{display:flex;align-items:center;gap:11px;justify-content:center}
+.hdr-ico{width:38px;height:38px;background:rgba(255,107,53,.1);border-radius:8px;
+ display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hdr-txt{text-align:left}
+.hdr-ey{font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+ color:var(--md);line-height:1;margin-bottom:3px}
+.hdr-na{font-size:16px;font-weight:800;color:var(--az);display:block;line-height:1.15}
+.hdr-nb{font-size:16px;font-weight:900;color:var(--or);display:block;line-height:1.15}
+.hdr-bar{height:4px;background:var(--or);margin-top:14px}
+/* ══════════════════════════════════
+ HERO
+══════════════════════════════════ */
+.hero{background:var(--off);padding:72px 0 0;text-align:center}
+.hero-ey{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+ color:var(--md);margin-bottom:18px}
+.hero-h1{font-size:clamp(26px,4vw,52px);font-weight:900;color:var(--pr);
+ line-height:1.12;text-wrap:balance;margin-bottom:0}
+.hero-h2{font-size:clamp(28px,4.4vw,58px);font-weight:900;color:var(--or);
+ line-height:1.1;margin-bottom:18px;text-wrap:balance}
+.hero-bold{font-size:16px;font-weight:700;color:var(--pr);margin-bottom:28px}
+.pills{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-bottom:28px}
+.pill{display:flex;gap:7px;align-items:center;font-size:14px;font-weight:600;color:var(--pr)}
+.pill-ck{width:22px;height:22px;border-radius:50%;background:var(--or);
+ display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hero-cta{max-width:440px;margin:0 auto 16px}
+/* hero-photo */
+.hero-photo{margin-top:24px;overflow:hidden}
+.hero-photo-grid{width:100%}
+.hero-photo-grid img{width:100%;height:auto;display:block;object-fit:cover;max-height:480px;object-position:center 20%}
+.hero-photo-grid img:first-child{display:none}
+.hero-photo-grid img:nth-child(2){transform:none;z-index:auto}
+.hero-photo-grid img:last-child{display:none}
+/* ══════════════════════════════════
+ DOR / HISTÓRIA
+══════════════════════════════════ */
+.dor{padding:72px 0}
+.dor-box{background:var(--cr);border:2px dashed #D97706;border-radius:4px;padding:44px 52px}
+.dor-box p{font-size:17px;color:var(--tx);line-height:1.9;margin-bottom:22px}
+.dor-box p:last-of-type{margin-bottom:0}
+.dor-upper{font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:var(--pr)}
+.mark,.hl{background:var(--am);padding:1px 4px;border-radius:2px}
+.dor-q{font-size:clamp(20px,2.5vw,28px);font-weight:900;color:var(--or);
+ text-align:center;line-height:1.35;margin:40px 0 28px;text-wrap:balance}
+.dor-sim{font-size:19px;font-weight:800;color:var(--pr);text-align:center;
+ margin-top:28px;padding:24px 20px;background:#fff;border-radius:6px;
+ border:1px solid var(--cl);line-height:1.5}
+.dor-sim span{color:var(--vd)}
+.prof-foot{display:flex;align-items:center;gap:14px;margin-top:32px;
+ padding-top:24px;border-top:1px solid #E9D8B0}
+.prof-av{width:52px;height:52px;border-radius:50%;overflow:hidden;flex-shrink:0;
+ border:2px solid #D97706}
+.prof-av img{width:100%;height:100%;object-fit:cover;object-position:top}
+.prof-n{font-size:14px;font-weight:700;color:var(--pr)}
+.prof-s{font-size:12px;color:var(--md);margin-top:2px}
+/* ══════════════════════════════════
+ NÃO É
+══════════════════════════════════ */
+.naoe{background:var(--br);padding:72px 0}
+.sec-t{font-size:clamp(22px,3vw,36px);font-weight:900;color:var(--pr);
+ text-align:center;margin-bottom:48px;line-height:1.2;text-wrap:balance}
+.sec-t span{color:var(--or)}
+.naoe-list{list-style:none}
+.ni{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--cl);align-items:flex-start}
+.ni:last-child{border-bottom:none}
+.ni-txt{font-size:16px;color:var(--tx);line-height:1.75}
+.ni-txt strong{color:var(--pr)}
+/* ══════════════════════════════════
+ PARA QUEM
+══════════════════════════════════ */
+.pq{background:var(--br);padding:72px 0}
+.pq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.pq-item{display:flex;gap:12px;padding:14px 0;border-bottom:1px solid var(--cl);align-items:flex-start}
+.pq-item:nth-child(odd){padding-right:32px;border-right:1px solid var(--cl)}
+.pq-item:nth-child(even){padding-left:32px}
+.pq-item:nth-last-child(-n+2){border-bottom:none}
+.pq-txt{font-size:15px;font-weight:600;color:var(--pr);line-height:1.5}
+.pq-fecho{margin-top:36px;font-size:18px;font-weight:700;font-style:italic;
+ color:var(--pr);text-align:center;line-height:1.55;text-wrap:balance}
+/* ══════════════════════════════════
+ ENTREGÁVEIS
+══════════════════════════════════ */
+.ent{background:var(--off);padding:72px 0}
+.ent-list{list-style:none;margin-top:12px}
+.ei{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--cl);align-items:flex-start}
+.ei:last-child{border-bottom:none}
+.ei-num{font-size:11px;font-weight:800;color:var(--or);letter-spacing:.1em;
+ min-width:26px;flex-shrink:0;padding-top:2px}
+.ei-t{font-size:16px;font-weight:700;color:var(--pr);margin-bottom:4px}
+.ei-d{font-size:14px;color:var(--md);line-height:1.65}
+.ei-wa .ei-num,.ei-wa .ei-t{color:var(--vd)}
+.bundle-price{background:var(--or);border-radius:12px;display:inline-block;padding:24px 52px;margin-bottom:28px;box-shadow:0 8px 32px rgba(255,107,53,.4)}
+@media(max-width:580px){.bundle-price{padding:20px 32px}}
+.ei-thumb{flex-shrink:0;width:108px;align-self:center;border-radius:8px;
+ overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.14);position:relative;margin-left:auto;background:var(--off)}
+.ei-thumb img{width:108px;height:72px;display:block;object-fit:cover}
+@media(max-width:768px){.ei-thumb img{width:90px;height:60px}}
+.ei-thumb::after{content:'\25B6';position:absolute;inset:0;display:flex;align-items:center;
+ justify-content:center;font-size:18px;color:rgba(255,255,255,.9);
+ background:rgba(0,0,0,.25);transition:background .2s;pointer-events:none}
+.ei-thumb:hover::after{background:rgba(0,0,0,.4)}
+/* ══════════════════════════════════
+ DEPOIMENTOS
+══════════════════════════════════ */
+.dep{background:var(--br);padding:72px 0}
+.dep-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:48px}
+.dc{background:#fff;border:1px solid var(--cl);border-radius:10px;
+ padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.dc-head{display:flex;gap:10px;align-items:center;margin-bottom:14px}
+.dc-av{width:50px;height:50px;border-radius:50%;overflow:hidden;flex-shrink:0;
+ border:2px solid var(--cl)}
+.dc-av img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.dc-av-icon{width:50px;height:50px;border-radius:50%;background:var(--cl);
+ display:flex;align-items:center;justify-content:center;flex-shrink:0;
+ font-size:19px;font-weight:700;color:var(--az)}
+.dc-nome{font-size:13px;font-weight:900;color:var(--pr);letter-spacing:.01em}
+.dc-nome::first-letter{color:var(--or);font-size:1.25em}
+.dc-cargo{font-size:10px;font-weight:600;text-transform:uppercase;
+ letter-spacing:.07em;color:var(--md);margin-top:2px}
+.dc-txt{font-size:14px;color:var(--tx);line-height:1.8}
+.dc-hl{background:var(--am);padding:1px 3px;border-radius:2px;font-weight:700;color:var(--pr)}
+.dep-cta{text-align:center}
+.dep-cta-h{font-size:clamp(20px,2.5vw,28px);font-weight:900;color:var(--pr);
+ margin-bottom:20px;line-height:1.25}
+.dep-cta-h span{color:var(--or)}
+/* ══════════════════════════════════
+ PROFESSOR
+══════════════════════════════════ */
+.prof-sec{background:var(--off);padding:0;overflow:hidden}
+.prof-row{display:grid;grid-template-columns:50% 1fr;min-height:600px;align-items:stretch}
+.prof-img-col{position:relative;overflow:hidden}
+.prof-img-col img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.prof-img-col::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,transparent 40%,var(--off) 90%);z-index:1}
+.prof-text-col{display:flex;align-items:center;padding:80px 56px 80px 0;margin-left:-80px;position:relative;z-index:2}
+.prof-text-inner{max-width:460px}
+.badge-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.badge{font-size:11px;font-weight:600;padding:5px 11px;border-radius:5px;
+ background:rgba(40,112,255,.08);border:1px solid rgba(40,112,255,.2);color:#2870FF}
+.prof-h{font-size:clamp(20px,2.3vw,26px);font-weight:800;color:var(--pr);
+ margin-bottom:16px;line-height:1.3}
+.prof-bio p{font-size:15px;color:var(--tx);line-height:1.85;margin-bottom:14px}
+.prof-bio p:last-child{margin-bottom:0}
+.prof-bio strong{color:var(--pr)}
+/* ══════════════════════════════════
+ PREÇO
+══════════════════════════════════ */
+.preco{background:var(--br);padding:72px 0}
+.preco-layout{display:grid;grid-template-columns:1fr 300px;gap:48px;align-items:start}
+.pi-row{display:flex;justify-content:space-between;align-items:center;
+ padding:13px 0;border-bottom:1px solid var(--cl)}
+.pi-n{display:flex;gap:9px;align-items:center;font-size:14px;font-weight:500;color:var(--pr)}
+.pi-ck{width:18px;height:18px;border-radius:50%;background:var(--vd);
+ display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pi-v{font-size:12px;color:var(--md);white-space:nowrap}
+.preco-total{display:flex;justify-content:space-between;padding:14px 0 0;
+ border-top:2px solid var(--pr);margin-top:4px}
+.pb{background:var(--off);border-radius:12px;border:1px solid var(--cl);
+ padding:34px 24px;text-align:center;position:sticky;top:40px}
+.pb-de{font-size:15px;color:var(--md);text-decoration:line-through;
+ text-decoration-color:var(--vm);text-decoration-thickness:2px;margin-bottom:4px}
+.pb-real{font-size:64px;font-weight:900;color:var(--or);line-height:1;
+ margin:4px 0 2px;letter-spacing:-2px}
+.pb-av{font-size:13px;color:var(--md);margin-bottom:6px}
+.pb-parc{font-size:14px;color:var(--tx);font-weight:500;margin-bottom:22px}
+.grt{display:flex;gap:8px;align-items:center;justify-content:center;
+ margin-top:12px;font-size:12px;color:var(--md)}
+/* ══════════════════════════════════
+ BLOCO 2 — PROMESSA
+══════════════════════════════════ */
+.b2{background:var(--br);padding:72px 0}
+.b2-h{font-size:clamp(20px,2.6vw,30px);font-weight:800;color:var(--pr);text-align:center;
+ line-height:1.3;margin-bottom:10px;text-wrap:balance}
+.b2-sub{font-size:17px;font-weight:700;color:var(--or);text-align:center;margin-bottom:14px}
+.b2-copy{font-size:16px;color:var(--tx);text-align:center;line-height:1.8;margin-bottom:36px;max-width:640px;margin-left:auto;margin-right:auto}
+.mesmo-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:32px}
+.mesmo-top,.mesmo-bot{grid-column:1/-1}
+.mesmo-item{background:var(--off);border-radius:6px;padding:20px 24px;display:flex;gap:14px;align-items:flex-start}
+.mesmo-num{width:28px;height:28px;border-radius:50%;background:var(--or);
+ display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:800;color:#fff}
+.mesmo-t{font-size:15px;font-weight:700;color:var(--pr);margin-bottom:3px}
+.mesmo-d{font-size:13px;color:var(--md);line-height:1.6}
+.comp-img{display:block;max-width:480px;margin:0 auto 36px;border-radius:8px;
+ box-shadow:0 4px 24px rgba(0,0,0,.1)}
+.opcoes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px}
+.op{border-radius:6px;padding:22px 24px}
+.op-x{background:#FEF2F2;border:1px solid #FECACA}
+.op-v{background:#F0FDF4;border:1px solid #BBF7D0}
+.op-tag{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:flex;gap:7px;align-items:center}
+.op-tag-x{color:var(--vm)}.op-tag-v{color:var(--vd)}
+.op-txt{font-size:14px;color:var(--tx);line-height:1.75}
+.b2-fecho{font-size:17px;font-weight:700;color:var(--pr);text-align:center;margin-bottom:28px;line-height:1.6;text-wrap:balance}
+.b2-fecho span{color:var(--or)}
+/* ══════════════════════════════════
+ 3 PASSOS
+══════════════════════════════════ */
+.passos{background:var(--off);padding:72px 0}
+.passos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:52px;position:relative}
+.passos-grid::before{content:'';position:absolute;top:22px;left:calc(100%/6);right:calc(100%/6);
+ height:2px;background:var(--cl);z-index:0}
+.passo{text-align:center;padding:0 24px}
+.passo-n{width:44px;height:44px;border-radius:50%;background:var(--az);color:#fff;
+ font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;
+ margin:0 auto 14px;position:relative;z-index:1;border:3px solid var(--off);
+ box-shadow:0 2px 10px rgba(26,43,74,.2)}
+.passo-t{font-size:16px;font-weight:700;color:var(--pr);margin-bottom:8px}
+.passo-d{font-size:13px;color:var(--md);line-height:1.65}
+.ent-pre{font-size:18px;font-weight:700;color:var(--pr);text-align:center;margin-bottom:8px;text-wrap:balance}
+.ent-mid{font-size:14px;color:var(--md);text-align:center;margin-bottom:32px}
+/* ══════════════════════════════════
+ CTA FINAL
+══════════════════════════════════ */
+.cta-fin{background:var(--az);padding:80px 0}
+.cta-c{text-align:center}
+.cta-h{font-size:clamp(26px,3.5vw,44px);font-weight:900;color:#fff;
+ line-height:1.2;margin-bottom:14px;text-wrap:balance}
+.cta-h span{color:var(--or)}
+.cta-sub{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:36px}
+.cta-btn-w{max-width:460px;margin:0 auto}
+.cta-trust{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.cta-ti{display:flex;gap:5px;align-items:center;font-size:11px;color:rgba(255,255,255,.35)}
+/* ══════════════════════════════════
+ FOOTER
+══════════════════════════════════ */
+.footer{background:var(--pr);padding:28px 0;text-align:center}
+.footer p{font-size:12px;color:rgba(255,255,255,.3)}
+/* ══════════════════════════════════
+ ACESSIBILIDADE / PRINT
+══════════════════════════════════ */
+@media print,screen and (prefers-reduced-motion:reduce){
+ .rv{opacity:1!important;transform:none!important}
+}
+html{scroll-padding-top:20px}
+/* ══════════════════════════════════
+ STICKY MOBILE CTA
+══════════════════════════════════ */
+.mob-sticky{
+ position:fixed;bottom:0;left:0;right:0;z-index:888;
+ background:#fff;border-top:3px solid var(--or);
+ padding:10px 16px;
+ padding-bottom:max(14px,env(safe-area-inset-bottom));
+ box-shadow:0 -6px 28px rgba(0,0,0,.15);
+ transform:translateY(110%);
+ transition:transform .3s cubic-bezier(.4,0,.2,1);
+ display:none;
+}
+.mob-sticky.vis{transform:translateY(0)}
+.mob-sticky-btn{
+ display:block;background:var(--or);color:#fff;font-weight:800;
+ font-size:16px;letter-spacing:.04em;text-transform:uppercase;
+ padding:16px 24px;border-radius:8px;text-align:center;
+ box-shadow:0 4px 16px rgba(255,107,53,.4);
+ -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+ border:none;cursor:pointer;
+}
+.mob-sticky-sub{
+ display:flex;justify-content:center;gap:14px;margin-top:7px;flex-wrap:wrap;
+}
+.mob-sticky-sub span{
+ font-size:10px;color:var(--md);display:flex;align-items:center;gap:3px;
+}
+/* ══════════════════════════════════
+ MOBILE ≤ 768px
+══════════════════════════════════ */
+@media(max-width:768px){
+ .mob-sticky{display:block}
+ body{padding-bottom:88px}
+ .W{padding:0 16px}
+ /* Seções — padding reduzido */
+ .hero{padding:44px 0 0}
+ .dor,.naoe,.pq,.ent,.dep,.b2,.passos,.preco,.cta-fin{padding:52px 0}
+ .mural-sec{padding:52px 0 44px}
+ /* Hero */
+ .hero-h1{font-size:clamp(22px,6vw,34px)}
+ .hero-h2{font-size:clamp(24px,7vw,40px)}
+ .hero-bold{font-size:15px}
+ .pills{gap:10px;justify-content:flex-start}
+ .hero-cta{max-width:100%}
+ /* Títulos de seção */
+ .sec-t{font-size:clamp(19px,5.5vw,28px);margin-bottom:32px}
+ /* Dor */
+ .dor-box{padding:24px 18px}
+ .dor-box p{font-size:15px;line-height:1.8;margin-bottom:18px}
+ .dor-q{font-size:clamp(17px,5vw,22px);margin:24px 0 18px}
+ .dor-sim{font-size:15px;padding:18px 16px}
+ /* Imagem comparativa — sem corte lateral */
+ .comp-img{width:100%!important;max-width:100%!important}
+ /* 3 Passos → cards empilhados */
+ .passos-grid{grid-template-columns:1fr;gap:14px;margin-bottom:40px}
+ .passos-grid::before{display:none}
+ .passo{text-align:left;background:var(--br);border-radius:10px;padding:20px 18px}
+ .passo-n{margin:0 0 12px}
+ .passo-t{font-size:15px}
+ .passo-d{font-size:13px}
+ /* Para quem */
+ .pq-grid{grid-template-columns:1fr}
+ .pq-item:nth-child(odd){border-right:none;padding-right:0}
+ .pq-item:nth-child(even){padding-left:0}
+ .pq-item:nth-last-child(-n+2){border-bottom:1px solid var(--cl)}
+ .pq-item:last-child{border-bottom:none!important}
+ .pq-txt{font-size:14px}
+ .pq-fecho{font-size:15px;margin-top:24px}
+ /* Entregáveis — miniaturas menores mas visíveis no mobile */
+ .ei-thumb{width:90px;flex-shrink:0;margin-left:0}
+.ei-thumb::after{font-size:12px}
+ .ei{gap:12px;padding:20px 0}
+ .ei-t{font-size:15px}
+ .ei-d{font-size:13px}
+ .ent-pre{font-size:16px}
+ /* Depoimentos */
+ .dep-grid{grid-template-columns:1fr}
+ /* Professor */
+ .prof-row{grid-template-columns:1fr;min-height:auto}
+ .prof-img-col{height:260px}
+ .prof-img-col::after{background:linear-gradient(to bottom,transparent 30%,var(--off) 82%)}
+ .prof-text-col{margin-left:0;padding:20px 16px 48px}
+ .prof-text-inner{max-width:100%}
+ .prof-bio p{font-size:14px}
+ /* Preço */
+ .preco-layout{grid-template-columns:1fr}
+ .pb{position:relative;top:0;margin-top:32px}
+ .pb-real{font-size:48px}
+ .pi-n{font-size:13px}
+ /* Opções (2 colunas → 1) */
+ .opcoes{grid-template-columns:1fr}
+ .mesmo-grid{grid-template-columns:1fr}
+ /* Bundle */
+ .bundle-price{padding:20px 32px}
+ /* Mural — sem rotação no mobile */
+ .mural-grid{column-count:2;column-gap:10px}
+ .mural-slot{margin-bottom:10px}
+ .mural-slot:nth-child(n){transform:none!important}
+ .mural-slot:hover{transform:none!important;box-shadow:0 4px 18px rgba(0,0,0,.16)}
+ /* FAQ — toque mais fácil */
+ .faq-q{font-size:14px;padding:16px 28px 16px 0;min-height:48px}
+ .faq-a.open{max-height:600px}
+ /* Popup → bottom sheet */
+ .pop-ov{align-items:flex-end}
+ .pop-box{max-width:100%;width:100%;border-radius:20px 20px 0 0;
+ transform:translateY(100%)}
+ .pop-ov.show .pop-box{transform:translateY(0)}
+ .pop-inner{padding:28px 20px 24px}
+ .pop-bar{margin:14px -20px 16px}
+ /* CTA final */
+ .cta-h{font-size:clamp(22px,6vw,36px)}
+ .cta-sub{font-size:15px}
+ /* Botões — touch-friendly */
+ .btn{padding:18px 24px;font-size:16px;border-radius:8px;
+ -webkit-tap-highlight-color:transparent;touch-action:manipulation}
+ /* Grids inline → 1 coluna */
+ [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
+ [style*="grid-template-columns:1fr 280px 1fr"]{grid-template-columns:1fr!important}
+ [style*="grid-template-columns:1fr 300px"]{grid-template-columns:1fr!important}
+}
+@media(max-width:420px){
+ .hero-h1{font-size:21px}
+ .hero-h2{font-size:24px}
+ .mural-grid{column-count:2}
+}
+/* ══════════════════════════════════
+ MURAL DE PROVAS SOCIAIS
+══════════════════════════════════ */
+.mural-sec{background:#E8EAED;padding:80px 0 60px;overflow:hidden}
+.mural-intro{text-align:center;margin-bottom:48px}
+.mural-grid{
+ max-width:1020px;margin:0 auto;padding:0 24px;
+ column-count:4;column-gap:14px
+}
+.mural-slot{
+ break-inside:avoid;margin-bottom:14px;
+ border-radius:12px;overflow:hidden;
+ box-shadow:0 4px 18px rgba(0,0,0,.16);
+ transition:transform .25s ease,box-shadow .25s ease;
+ position:relative
+}
+.mural-slot:nth-child(2n){transform:rotate(-1.4deg)}
+.mural-slot:nth-child(3n){transform:rotate(1.6deg)}
+.mural-slot:nth-child(4n){transform:rotate(-0.6deg)}
+.mural-slot:nth-child(5n){transform:rotate(2.1deg)}
+.mural-slot:nth-child(6n){transform:rotate(-1.9deg)}
+.mural-slot:nth-child(7n){transform:rotate(0.8deg)}
+.mural-slot:hover{transform:rotate(0) scale(1.04)!important;box-shadow:0 10px 32px rgba(0,0,0,.24);z-index:20}
+@media(max-width:860px){.mural-grid{column-count:3}}
+@media(max-width:580px){
+ .mural-grid{column-count:2;column-gap:10px}
+ .mural-slot{margin-bottom:10px}
+}
+/* FAQ */
+.faq-item{border-bottom:1px solid var(--cl)}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;
+ font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:var(--pr);
+ padding:18px 32px 18px 0;display:flex;justify-content:space-between;align-items:center;
+ position:relative;line-height:1.4}
+.faq-q::after{content:'+';position:absolute;right:0;font-size:20px;font-weight:400;
+ color:var(--md);transition:transform .2s}
+.faq-q[aria-expanded="true"]::after{content:'−'}
+.faq-a{font-size:14px;color:var(--tx);line-height:1.75;max-height:0;overflow:hidden;
+ transition:max-height .3s ease,padding .3s ease;padding-bottom:0}
+.faq-a.open{max-height:200px;padding-bottom:18px}
+</style>
+</head>
+<body> <div class="pop-ov" id="popup" role="dialog" aria-modal="true"> <div class="pop-box"> <div class="pop-inner"> <button class="pop-close" id="popClose" aria-label="Fechar">✕</button> <div class="pop-logo" style="justify-content:center"> <img loading="lazy" decoding="async" src="webp/logo.webp" alt="Formulário de Redação Nota Máxima — Prof. Thiago Marques" style="max-width:240px;width:100%;height:auto;display:block;margin:0 auto"> </div> <div class="pop-bar"></div> <p class="pop-tit">Formulário de Redação <span>Nota Máxima</span></p> <p class="pop-sub">Para tirar nota máxima na redação do concurso, no menor tempo possível — sem travar na folha em branco.</p> <a href="#preco" class="pop-btn" id="popCta">Quero Meu Formulário Agora →</a> <span class="pop-skip" id="popSkip">Não, obrigado — vou arriscar sem ele</span> </div> </div>
+</div> <header class="hdr"> <div class="W"> <div class="hdr-in"> <img src="webp/logo.webp" alt="Formulário de Redação Nota Máxima — Prof. Thiago Marques" style="max-width:220px;width:100%;height:auto;display:block"> </div> </div> <div class="hdr-bar"></div>
+</header> <section class="hero"> <div class="W"> <p class="hero-ey rv">PROF. THIAGO MARQUES </p> <h1 class="hero-h1 rv d1">Esta é a peça que faltava para você finalmente</h1> <p class="hero-h2 rv d2">Tirar Nota Máxima na Redação do Concurso</p> <p class="hero-bold rv d2">Para tirar nota máxima na redação, no menor tempo possível.</p> </div> <div class="hero-photo rv d3"> <div class="hero-photo-grid"> <img decoding="async" src="webp/hero-doc1.webp" alt="Formulário de redação preenchido"> <img src="webp/hero.webp" alt="Redação nota máxima — exemplo de aluno aprovado" width="860" height="480" fetchpriority="high" data-comment-anchor="0e270c45a9-img"> <img decoding="async" src="webp/hero-doc2.webp" alt="Redação para concurso público"> </div> </div>
+</section> <section class="b2" data-comment-anchor="f1ed2ece29-section"> <div class="W" data-comment-anchor="a3afbff5da-div"> <h2 class="b2-h rv">Acesse agora o Formulário de Redação que está ajudando candidatos a escreverem no padrão exato das bancas.</h2> <p class="b2-sub rv d1">Para tirar nota máxima na redação, no menor tempo possível.</p> <p class="b2-copy rv d2">Copie e cole a estrutura usada para escrever redações no padrão que as bancas mais pontuam, sem começar do zero e tire nota máxima na redação, no menor tempo possível.</p> <div class="pills rv d2" style="margin:24px 0 28px"> <span class="pill"><span class="pill-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Destrave rápido</span> <span class="pill"><span class="pill-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Menos improviso. Mais estrutura</span> <span class="pill"><span class="pill-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Aplicação imediata</span> <span class="pill"><span class="pill-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Hacks de redação</span> </div> <img decoding="async" class="comp-img rv d2" src="webp/comparativo.webp" alt="Sem o formulário vs Com o formulário" style="max-width:480px;margin:0 auto 28px;border-radius:8px;box-shadow:0 4px 24px rgba(0,0,0,.1)"> <div class="hero-cta rv d3" style="max-width:440px;margin:0 auto"> <a href="#preco" class="btn">Quero Meu Formulário Agora</a> </div> </div>
+</section> <section class="mural-sec"> <div class="W mural-intro"> <p class="hero-ey rv" style="margin-bottom:6px">E nos bastidores...</p> <h2 class="sec-t rv" style="margin-bottom:0">Veja o que os alunos estão dizendo <span>no privado</span></h2> </div> <div class="mural-grid rv d1"> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-01.webp"
+ alt="Karla Ferreira — Aprovação Semed Manaus"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-02.webp"
+ alt="Raquel — Aprovação no concurso"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-03.webp"
+ alt="gabymendon — Fui bem em minha prova"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-04.webp"
+ alt="professor_andersonbio — Tudo que passou no aulão caiu"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-05.webp"
+ alt="maycon.love2012 — Comprei seu material, gostando bastante"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-06.webp"
+ alt="stefaniecavalheiro — Não sei de onde ele tira esses macetes"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-07.webp"
+ alt="papelinecraft — A criatividade do professor é infinita"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-08.webp"
+ alt="professoraaquila — Antes de ser auditor foi meu professor"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-09.webp"
+ alt="prof.williamdacruz — O mago da aprovação"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-10.webp"
+ alt="professoraaquila — Um dos melhores professores da terra"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-11.webp"
+ alt="AquilaSilva — Melhor professor da galáxia"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-12.webp"
+ alt="keniamarciar — Exemplo para todos os alunos"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-13.webp"
+ alt="ednajredu — Aulas maravilhosas, compromisso que motiva"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-14.webp"
+ alt="adriansouzablack — O material é TOP"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-15.webp"
+ alt="izabelcristina — Impressionada com as qualidades das aulas"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-16.webp"
+ alt="Karla Ferreira — Aprovação Semed Manaus"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-17.webp"
+ alt="Silvia Prof — Muito satisfeita com o curso"
+ style="width:100%;height:auto;display:block"></div> <div class="mural-slot"> <img loading="lazy" decoding="async" src="webp/mural-18.webp"
+ alt="Impossível não me lembrar de vc a cada questão feita"
+ style="width:100%;height:auto;display:block"></div> </div> <div style="text-align:center;margin-top:48px" class="rv d2"> <a href="#preco" class="btn" style="display:inline-block;padding:18px 48px">Quero Meu Formulário Agora →</a> </div>
+</section> <section class="dor"> <div class="W"> <div class="dor-box rv"> <p>Você já sentiu aquele frio na espinha, a sensação de que toda a sua dedicação e noites em claro podem ir por água abaixo por causa da redação? O sonho da aprovação, a estabilidade, a mudança de vida, tudo isso pode acabar na hora da redação, se você não obter nota alta.</p> <p>Você já se perguntou como alguns candidatos conseguem escrever redações com tanta segurança, como se soubessem exatamente o que fazer, enquanto você fica travado, preso na dúvida: <span class="hl">"Faço a redação agora ou deixo para depois?"</span> Essa decisão, que parece pequena, pode custar a sua vaga.</p> <p>Você já notou que <span class="dor-upper">ESTÁ TODO MUNDO FALANDO SOBRE COMO COMEÇAR A ESTUDAR PARA CONCURSOS, MAS POUCOS TE DÃO A CHAVE PARA DOMINAR A REDAÇÃO E GARANTIR A APROVAÇÃO?</span> A maioria dos materiais foca no conteúdo, mas a redação, o verdadeiro divisor de águas, é deixada de lado, como se fosse um detalhe. Essa lacuna na sua preparação é o que impede muitos de alcançarem a tão sonhada vaga.</p> <p>O problema é que essa falta de orientação específica para a redação gera apenas frustração e o risco real de perder a sua vaga. Você fica sozinho, sem saber como otimizar seu tempo na prova, como estruturar um texto que agrade a banca e, principalmente, <span class="hl">como ter a confiança de que sua redação alcançará a nota máxima.</span></p> <p>Ninguém parece disposto a mostrar o caminho exato para a nota máxima na redação, a desvendar os segredos das bancas e a te dar a segurança para escrever com fluidez e precisão.</p> <p>Não permita mais que a incerteza e o medo da redação coloquem barreiras entre você e a sua aprovação.</p> <div class="dor-q">Se você tivesse um passo a passo direto ao ponto, com todas as estratégias comprovadas para a redação não ser mais seu calcanhar de aquiles — isso não faria você se sentir muito mais seguro para escrever qualquer redação no próximo concurso?</div> <div class="dor-sim">Se a sua resposta for <span>"SIM"</span>, o Formulário de Redação Nota Máxima é para você.</div> <div class="prof-foot"> <div class="prof-av"> <img loading="lazy" decoding="async" src="webp/prof-avatar.webp" alt="Prof. Thiago Marques"> </div> <div> <div class="prof-n">Prof. Thiago Marques</div> <div class="prof-s">Auditor TCE · Parceiro Gran Cursos Online</div> </div> </div> </div> </div>
+</section> <section class="passos" id="entregaveis"> <div class="W"> <h2 class="sec-t rv">Estes são os <span>3 passos rápidos</span> para você destravar a redação</h2> <div class="passos-grid rv d1"> <div class="passo"> <div class="passo-n">1</div> <div class="passo-t">Acesse o Curso Express</div> <p class="passo-d">Em pouco tempo, descubra a estrutura exata da redação nota máxima e como fazer uma introdução sem travar.</p> </div> <div class="passo"> <div class="passo-n">2</div> <div class="passo-t">Aplique o Método na Prática</div> <p class="passo-d">Desenvolva seus argumentos sem se perder e crie uma conclusão perfeita para impressionar o examinador.</p> </div> <div class="passo"> <div class="passo-n">3</div> <div class="passo-t">Gabarite a Redação</div> <p class="passo-d">Chegue na prova com a segurança de quem sabe o que a banca quer, elimine a ansiedade e garanta sua nota máxima, sem dúvidas de "faço agora ou deixo pra depois".</p> </div> </div> <p class="ent-pre rv">E para seguir esses 3 passos, veja tudo que você vai receber com o Formulário da Redação Nota Máxima:</p> <ul class="ent-list" style="margin-top:24px"> <li class="ei rv d1"><span class="ei-num">01</span><div><div class="ei-t">Ativador de Introduções Nota Máxima</div><p class="ei-d">Todas as estruturas e frases prontas para iniciar sua redação com perfeição. Modelos testados, atalhos práticos e gatilhos de impacto para prender a atenção do examinador desde a primeira linha e transformar o bloqueio inicial em nota máxima, mesmo quando o tema parece impossível. Acabe com a ansiedade da folha em branco e garanta um começo impecável para sua aprovação.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-01.jpg" alt="Ativador de Introduções Nota Máxima" width="108" height="72"></div></li> <li class="ei rv d1"><span class="ei-num">02</span><div><div class="ei-t">Código da Argumentação</div><p class="ei-d">O padrão usado para transformar ideias soltas em argumentos muito mais fortes, organizados e fáceis de desenvolver na hora da redação.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-02.jpg" width="108" height="72" alt="Código da Argumentação"></div></li> <li class="ei rv d2"><span class="ei-num">03</span><div><div class="ei-t">Citações Coringas para Qualquer Tema</div><p class="ei-d">O guia prático com as frases mais versáteis do mundo acadêmico para usar em qualquer redação. Estruturas prontas e mastigadas que se adaptam a diversos contextos, para deixar sua redação mais forte, sofisticada e alinhada ao padrão das bancas.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-03.jpg" width="108" height="72" alt="Citações Coringas para Qualquer Tema"></div></li> <li class="ei rv d2"><span class="ei-num">04</span><div><div class="ei-t">Guia Vocabulário de Elite</div><p class="ei-d">Chega de palavras repetidas ou de sentir que seu texto não tem brilho! Uma seleção criteriosa de palavras e expressões de alto impacto que os examinadores esperam ver — e um passo a passo claro para usá-las sem travar. Descubra os conectivos que garantem a coesão perfeita e os termos que elevam o nível da sua argumentação.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-04.jpg" width="108" height="72" alt="Guia Vocabulário de Elite"></div></li> <li class="ei rv d3" style="border-top:2px dashed var(--cl);padding-top:28px"><span class="ei-num" style="color: rgb(0, 0, 0)">+</span><div><div class="ei-t" style="color: rgb(0, 0, 0); font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em">Ainda não acabou, você ainda vai receber…</div></div></li> <li class="ei rv d3"><span class="ei-num">05</span><div><div class="ei-t">Protocolo de Escrita Blindada</div><p class="ei-d">Sua letra pode estar te roubando pontos valiosos sem você saber! Com o Protocolo de Escrita Blindada, você terá o sistema definitivo para a letra que pontua: tamanho ideal, espaçamento perfeito, a caneta certa e todos os segredos visuais que facilitam a vida do corretor e garantem que cada palavra seja lida e valorizada.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-05.jpg" width="108" height="72" alt="Protocolo de Escrita Blindada"></div></li> <li class="ei rv"><span class="ei-num">06</span><div><div class="ei-t">Sistema de Decisão do Título</div><p class="ei-d">Chega de dúvidas! Este sistema entrega a resposta definitiva sobre o uso do título na sua redação. Saiba exatamente quando usar, quando evitar e como cada banca avalia — garantindo que você tome a decisão certa na hora da prova.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-06.jpg" width="108" height="72" alt="Sistema de Decisão do Título"></div></li> <li class="ei rv"><span class="ei-num">07</span><div><div class="ei-t">Checklist da Redação Impecável</div><p class="ei-d">Não arrisque sua aprovação! Este checklist de inspeção final garante um texto impecável. Descubra o que revisar nos últimos minutos, as palavras obrigatórias e proibidas, e os erros que derrubam a nota. Entregue uma redação impecável e conquiste sua vaga.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-07.jpg" width="108" height="72" alt="Checklist da Redação Impecável"></div></li> <li class="ei rv"><span class="ei-num">08</span><div><div class="ei-t">Manual de Escrita Baseado na Banca</div><p class="ei-d">Modelos de redação que revelam o "código" do que pontua. Estruturas completas, do início ao fim, prontas para serem adaptadas ao tema da sua prova. É a sua vantagem competitiva para entregar a redação perfeita e conquistar a nota máxima, sem esforço e sem surpresas.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-08.jpg" width="108" height="72" alt="Manual de Escrita Baseado na Banca"></div></li> <li class="ei ei-wa rv"><span class="ei-num">09</span><div><div class="ei-t">Acompanhamento Diário no WhatsApp</div><p class="ei-d">Você terá acesso direto ao Professor Thiago Marques via WhatsApp para solucionar qualquer questão sobre sua escrita. É o apoio imediato para destravar ideias, corrigir rumos e garantir que cada palavra contribua para sua nota máxima. Tenha a segurança de um especialista ao seu lado, eliminando a incerteza e seguindo com confiança total rumo à aprovação.</p></div><div class="ei-thumb"><img loading="lazy" decoding="async" src="webp/module-09.jpg" width="108" height="72" alt="Acompanhamento Diário no WhatsApp"></div></li> </ul> </div>
+</section> <section class="pq" style="background:var(--off)" data-comment-anchor="ec6349220d-section"> <div class="W"> <h2 class="sec-t rv">O Formulário de Redação Nota Máxima<br><span>é para você que...</span></h2> <div class="pq-grid"> <div class="pq-item rv d1"><div class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="pq-txt">Tem medo de perder a aprovação por causa da redação, sentindo que todo o seu esforço pode ir por água abaixo em uma única folha de papel.</span></div> <div class="pq-item rv d1"><div class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="pq-txt">Se sente paralisado, trava na hora de começar ou se perde completamente no desenvolvimento, sem saber como fazer uma conclusão que realmente impressione.</span></div> <div class="pq-item rv d2"><div class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="pq-txt">Já se cansou de dicas genéricas e promessas vazias que não te ensinam a escrever o que a banca realmente quer ler, e busca algo prático e direto ao ponto.</span></div> <div class="pq-item rv d2"><div class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="pq-txt">Precisa eliminar a ansiedade de "qual será o tema" e a dúvida cruel de "faço a redação agora ou deixo pra depois" na hora da prova, querendo segurança e velocidade.</span></div> <div class="pq-item rv d3"><div class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="pq-txt">Deseja ter um "copiar e colar" legalizado para escrever redações nota máxima, com estruturas prontas, argumentos sólidos e citações estratégicas, sem precisar quebrar a cabeça.</span></div> <div class="pq-item rv d3"><div class="ck"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span class="pq-txt">Quer entender a mente do examinador e ter acesso a um protocolo claro que te guie para a nota máxima, transformando a redação de um obstáculo em seu maior diferencial para a aprovação.</span></div> </div> <p class="pq-fecho rv">Enfim… Se você quer tirar a nota máxima na redação no menor tempo possível,<br>o Formulário da Redação Nota Máxima é para você!</p> </div>
+</section> <section class="preco" id="preco" data-comment-anchor="3d1f2b0117-section"> <div class="W"> <h2 class="sec-t rv">Recapitulando — <span>tudo que você leva</span></h2> <div class="preco-layout"> <div> <ul style="list-style:none"> <li class="pi-row rv d1"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Ativador de Introduções Nota Máxima</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv d1"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Código da Argumentação</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv d2"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Citações Coringas para Qualquer Tema</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv d2"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Guia Vocabulário de Elite</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv d3"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Protocolo de Escrita Blindada</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv d3"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Sistema de Decisão do Título</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Checklist da Redação Impecável</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv"><div class="pi-n"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Manual de Escrita Baseado na Banca</div><span class="pi-v">R$ 147</span></li> <li class="pi-row rv" style="border-bottom:none"><div class="pi-n" style="color:var(--vd);font-weight:700"><div class="pi-ck"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>Acompanhamento Diário no WhatsApp</div><span class="pi-v">R$ 297</span></li> </ul> <div class="preco-total rv"> <span style="font-size:13px;font-weight:700;color:var(--md)">Total</span> <span style="font-size:16px;font-weight:800;color:var(--md);text-decoration:line-through;text-decoration-color:var(--vm);text-decoration-thickness:2px">R$ 1.076,00</span> </div> </div> <div class="pb rv d1"> <p style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--or);margin-bottom:8px">Acesso imediato</p> <p class="pb-de">R$ 1.076,00</p> <p class="pb-real">R$&nbsp;97</p> <p class="pb-av">à vista</p> <p class="pb-parc">ou 12× de R$ 8,08 no cartão</p> <a href="#" class="btn" style="margin-bottom:12px">Quero Agora →</a> <div class="grt"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+ Garantia incondicional de 7 dias
+ </div> </div> </div> </div>
+</section> <section class="prof-sec"> <div class="prof-row"> <div class="prof-img-col"> <img loading="lazy" decoding="async" src="webp/prof-foto.webp" alt="Prof. Thiago Marques"> </div> <div class="prof-text-col"> <div class="prof-text-inner"> <div class="badge-row rv"> <span class="badge">Auditor TCE</span> <span class="badge">Gran Cursos Online</span> <span class="badge">+20 anos</span> <span class="badge">Milhares de aprovações</span> </div> <h3 class="prof-h rv d1">Quem é o Prof. Thiago Marques?</h3> <div class="prof-bio rv d2"> <p>Auditor do TCE com <strong>mais de 20 anos de experiência</strong> no ensino para concursos públicos, o Prof. Thiago Marques é um dos maiores especialistas em redação para concursos do Brasil.</p> <p>Parceiro do <strong>Gran Cursos Online</strong>, já ajudou <strong>milhares de candidatos</strong> a transformar a redação — que era o maior obstáculo — no maior diferencial para a aprovação.</p> <p>O Formulário de Redação Nota Máxima é a destilação de tudo que o Thiago aprendeu corrigindo, ensinando e aprovando candidatos ao longo de duas décadas.</p> </div> </div> </div> </div>
+</section> <section class="b2" style="background: var(--az); background-color: rgba(26, 43, 74, 0.06)" data-comment-anchor="1534cc0f6e-section"> <div class="W"> <h2 class="rv" style="font-size:clamp(22px,3vw,36px);font-weight:900;color:var(--or);text-align:center;margin-bottom:32px;text-wrap:balance" data-comment-anchor="8216a0d960-h2">Agora você tem duas opções</h2> <div class="opcoes rv d1"> <div class="op op-x" style="background:rgba(220,38,38,.12);border-color:rgba(220,38,38,.3)"> <div class="op-tag op-tag-x"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+ Opção 1
+ </div> <p class="op-txt" style="color: rgba(16, 15, 15, 0.984)">Continuar seguindo sem resultado na redação, com o medo constante de perder a aprovação, sofrendo com o bloqueio criativo e vendo seu sonho de estabilidade se distanciar a cada prova.</p> </div> <div class="op op-v" style="background:rgba(22,163,74,.12);border-color:rgba(22,163,74,.3)"> <div class="op-tag op-tag-v"> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+ Opção 2
+ </div> <p class="op-txt" style="color: rgba(16, 15, 15, 0.984)">Investir no Formulário de Redação Nota Máxima e finalmente copiar as estruturas, argumentos e o protocolo que garantem sua nota máxima, transformando a redação em seu maior diferencial para a aprovação.</p> </div> </div> <p class="b2-fecho rv" style="margin-top:28px">Eu sei, e você também sabe... <span>A opção 2 é a mais inteligente e é a que você mais precisa.</span><br>Então toque no botão abaixo e garanta seu acesso agora!</p> <div style="max-width:440px;margin:0 auto" class="rv d2"> <a href="#preco" class="btn">Quero Meu Formulário Agora</a> </div> </div>
+</section> <section style="background:var(--az);padding:72px 0 64px"> <div class="W" style="text-align:center" data-comment-anchor="3bbab46b36-div"> <p class="hero-ey rv" style="color:rgba(255,255,255,.5);margin-bottom:10px">Um único investimento · Acesso imediato</p> <h2 class="rv" style="font-size:clamp(24px,3vw,40px);font-weight:900;color:#fff;margin-bottom:10px;text-wrap:balance;line-height:1.2">Tudo isso em um único pacote</h2> <p class="rv d1" style="font-size:16px;color:rgba(255,255,255,.55);margin-bottom:36px">9 ferramentas prontas para usar na sua próxima prova</p> <div class="rv d1" style="max-width:960px;margin:0 auto 40px;border-radius:12px;overflow:hidden;box-shadow:0 16px 60px rgba(0,0,0,.45)"> <img loading="lazy" decoding="async" src="webp/bundle.webp"
+ alt="9 módulos do Formulário de Redação Nota Máxima — Prof. Thiago Marques"
+ style="width:100%;height:auto;display:block"> </div> <div class="bundle-price rv d2"> <p style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:4px">12× de</p> <p style="font-size:60px;font-weight:900;color:#fff;line-height:1;letter-spacing:-2px">R$8,08</p> <p style="font-size:13px;color:rgba(255,255,255,.75);margin-top:4px">ou R$97 à vista</p> </div> <div style="max-width:420px;margin:0 auto" class="rv d3"> <a href="#preco" class="btn">Quero o Pacote Completo →</a> </div> </div>
+</section> <section style="background:#fff;padding:72px 0"> <div class="W"> <h2 class="sec-t rv">Compre agora e receba seu <span>acesso no e-mail imediatamente!</span></h2> <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="rv d1"> <div style="background:var(--off);border-radius:10px;padding:28px 24px"> <div style="width:44px;height:44px;margin-bottom:16px;color:#16A34A"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="44" height="44"><rect x="2" y="4" width="20" height="16" rx="2" style="stroke: rgb(59, 202, 127)"/><polyline points="2,4 12,13 22,4" style="stroke: rgb(59, 202, 127)"/></svg> </div> <div style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgb(59, 202, 127); margin-bottom: 10px">Faça sua compra</div> <p style="font-size:14px;color:var(--tx);line-height:1.7">Assim que o pagamento for confirmado, você recebe acesso total ao Formulário de Redação Nota Máxima no seu e-mail.</p> </div> <div style="background:var(--off);border-radius:10px;padding:28px 24px"> <div style="width:44px;height:44px;margin-bottom:16px;color:#16A34A"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="44" height="44"><polyline points="8 17 12 21 16 17" style="stroke: rgb(59, 202, 127)"/><line x1="12" y1="12" x2="12" y2="21" style="stroke: rgb(59, 202, 127)"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29" style="stroke: rgb(59, 202, 127)"/></svg> </div> <div style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgb(59, 202, 127); margin-bottom: 10px">Acesse o conteúdo</div> <p style="font-size:14px;color:var(--tx);line-height:1.7">Todo o conteúdo fica liberado para você acessar e baixar, direto no seu celular, computador ou tablet, sem complicação.</p> </div> <div style="background:var(--off);border-radius:10px;padding:28px 24px"> <div style="width:44px;height:44px;margin-bottom:16px;color:#16A34A"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="44" height="44"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" style="stroke: rgb(59, 202, 127)"/><polyline points="22 4 12 14.01 9 11.01" style="stroke: rgb(59, 202, 127)"/></svg> </div> <div style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: rgb(59, 202, 127); margin-bottom: 10px">Tudo pronto!</div> <p style="font-size:14px;color:var(--tx);line-height:1.7">Em poucos minutos, comece a aplicar todas as estruturas, argumentos e protocolos validados para garantir sua nota máxima.</p> </div> </div> </div>
+</section> <section style="background:var(--off);padding:72px 0"> <div class="W" style="max-width:680px"> <h2 class="sec-t rv" style="margin-bottom:36px">Perguntas Frequentes</h2> <div id="faq-list"> <div class="faq-item rv d1"> <button class="faq-q" aria-expanded="false">Como vou receber o acesso?</button> <div class="faq-a">Assim que o pagamento for confirmado, você recebe o link de acesso direto no seu e-mail cadastrado, de forma automática e imediata.</div> </div> <div class="faq-item rv d1"> <button class="faq-q" aria-expanded="false">Posso acessar pelo celular?</button> <div class="faq-a">Sim! Todo o conteúdo fica disponível para você acessar e baixar direto no celular, computador ou tablet — sem complicação.</div> </div> <div class="faq-item rv d2"> <button class="faq-q" aria-expanded="false">O pagamento é seguro?</button> <div class="faq-a">Sim, 100%. O pagamento é processado pela Kiwify, plataforma segura, criptografada e utilizada por milhares de produtores digitais no Brasil.</div> </div> <div class="faq-item rv d2"> <button class="faq-q" aria-expanded="false">Serve para quem está começando do zero?</button> <div class="faq-a">Sim. O Formulário foi criado para ser simples e direto — mesmo quem nunca escreveu uma redação nota máxima consegue aplicar imediatamente na próxima prova.</div> </div> <div class="faq-item rv d3"> <button class="faq-q" aria-expanded="false">Serve para qualquer banca?</button> <div class="faq-a">Sim. O material contempla as principais bancas do Brasil: CEBRASPE, FCC, FGV, VUNESP e outras. O Prof. Thiago Marques adaptou o conteúdo para funcionar em qualquer concurso.</div> </div> <div class="faq-item rv d3"> <button class="faq-q" aria-expanded="false">Por quanto tempo terei acesso ao Formulário?</button> <div class="faq-a">O acesso é vitalício. Você baixa o material e usa quando quiser, para sempre — mesmo depois de aprovado.</div> </div> <div class="faq-item rv"> <button class="faq-q" aria-expanded="false">E se não funcionar pra mim?</button> <div class="faq-a">Você tem <strong>7 dias de garantia incondicional</strong>. Se por qualquer motivo não ficar satisfeito, basta enviar um e-mail e devolvemos 100% do valor pago, sem questionamentos.</div> </div> </div> </div>
+</section> <section class="cta-fin" style="background-color: rgba(26, 43, 74, 0.055)"> <div class="W"> <div class="cta-c"> <h2 class="cta-h rv" data-comment-anchor="a52f47d723-h2" style="color: rgb(255, 107, 53)"><span style="color: rgb(255, 107, 53)">Pare de perder pontos.</span> <span style="color:var(--or)">Comece a gabaritar.</span></h2> <p class="cta-sub rv d1" style="color: rgb(22, 21, 21)">O Formulário de Redação Nota Máxima está esperando por você.</p> <div class="cta-btn-w rv d2"> <a href="#preco" class="btn">Quero Meu Formulário Agora</a> <div class="cta-trust"> <span class="cta-ti"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span> <span class="trust-sep" style="color:rgba(255,255,255,.15)">|</span> <span class="cta-ti"></span> <span class="trust-sep" style="color:rgba(255,255,255,.15)">|</span> <span class="cta-ti"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> </div> </div> </div> </div>
+</section> <footer style="background:#fff;border-top:3px solid var(--or);padding:40px 0 0"> <div class="W" style="text-align:center"> <div style="margin-bottom:18px" data-comment-anchor="89ee3fb2e4-div"> <img loading="lazy" decoding="async" src="webp/logo.webp" alt="Formulário de Redação Nota Máxima — Prof. Thiago Marques" style="max-width:200px;width:100%;height:auto;display:block;margin:0 auto"> </div> <p style="font-size:14px;color:var(--az);margin-bottom:6px">Tem alguma dúvida? Mande pelo e-mail:</p> <p style="font-size:15px;font-weight:700;color:var(--az);margin-bottom:24px">auditorthiago1@gmail.com</p> <p style="font-size:12px;color:var(--md);max-width:560px;margin:0 auto 32px;line-height:1.7">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Este produto é de natureza educacional e não garante resultados específicos. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais de alunos.</p> </div> <div style="border-top:1px solid var(--cl);padding:16px 0;text-align:center;margin-top:4px"> <p style="font-size:12px;color:var(--md)">© 2025 Prof. Thiago Marques · Todos os Direitos Reservados</p> </div>
+</footer> <div class="mob-sticky" id="mobSticky"> <a href="#preco" class="mob-sticky-btn">Quero Meu Formulário Agora →</a> <div class="mob-sticky-sub"> <span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantia 7 dias</span> <span><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pagamento seguro</span> <span>R$97 ou 12× R$8,08</span> </div>
+</div> <script>
+// popup desativado
+// ── SCROLL REVEAL ──
+(function(){
+ var els=document.querySelectorAll('.rv');
+ function showAll(){els.forEach(function(el){el.classList.add('on')});}
+ if('IntersectionObserver' in window){
+ var io=new IntersectionObserver(function(entries){
+ entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}});
+ },{threshold:0.08});
+ els.forEach(function(el){io.observe(el)});
+ // Safety net: if IO hasn't fired after 900ms (headless/print), reveal everything
+ setTimeout(function(){
+ els.forEach(function(el){if(!el.classList.contains('on'))el.classList.add('on')});
+ },900);
+ } else {
+ showAll();
+ }
+})();
+// ── FAQ ──
+document.querySelectorAll('.faq-q').forEach(function(btn){
+ btn.addEventListener('click',function(){
+ var open = this.getAttribute('aria-expanded')==='true';
+ document.querySelectorAll('.faq-q').forEach(function(b){
+ b.setAttribute('aria-expanded','false');
+ b.nextElementSibling.classList.remove('open');
+ });
+ if(!open){
+ this.setAttribute('aria-expanded','true');
+ this.nextElementSibling.classList.add('open');
+ }
+ });
+});
+// ── STICKY MOBILE CTA ──
+(function(){
+ var sticky=document.getElementById('mobSticky');
+ var preco=document.getElementById('preco');
+ if(!sticky) return;
+ function check(){
+ var scrolled=window.scrollY>220;
+ var precoVis=false;
+ if(preco){var r=preco.getBoundingClientRect();precoVis=r.top<window.innerHeight*.85&&r.bottom>0;}
+ sticky.classList.toggle('vis',scrolled&&!precoVis);
+ }
+ window.addEventListener('scroll',check,{passive:true});
+ setTimeout(check,400);
+})();
+</script>
+</body>
+</html>
