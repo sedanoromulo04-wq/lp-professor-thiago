@@ -1,0 +1,7 @@
+uploads/
+.image-slots.state.json
+image-slot.js
+*.md
+watch.js
+webp/src/
+assets/
